@@ -1,0 +1,9 @@
+.home_bg{
+    background-image:url(https://chaty.app/wp-content/uploads/2021/12/2021-12-17_13h47_56.png);
+    height: 530px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
