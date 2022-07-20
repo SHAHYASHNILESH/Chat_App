@@ -22,3 +22,6 @@ const io=require('socket.io')(server,{
 server.listen(PORT,()=>{
     console.log('Listening to PORT',PORT);
 });
+
+const userRouter=require('./Routers/userRouter');
+app.use('/users',userRouter);

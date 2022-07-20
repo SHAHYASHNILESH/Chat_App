@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const bcypt=require('bcrypt');
+const bcrypt=require('bcrypt');
 const validator=require('validator');
 const { default: isEmail } = require('validator/lib/isEmail');
 
@@ -39,6 +39,14 @@ const UserSchema=mongoose.Schema({
         default:'Online'
     }
 },{minimize:false});
+
+UserSchema.pre('save',async function(){
+        let salt=await bcrypt.genSalt();
+        let hashedString=await bcrypt.hash(this.password,salt);
+        //console.log(hashedString);
+        this.password=hashedString;
+});
+
 
 const usersModels=mongoose.model('usersModels',UserSchema);
 
