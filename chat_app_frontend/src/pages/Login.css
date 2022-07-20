@@ -1,0 +1,10 @@
+.login_bg{
+    background-image: url(http://cdn.onlinewebfonts.com/svg/img_568656.png);
+    width: 500px;
+    height:550px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

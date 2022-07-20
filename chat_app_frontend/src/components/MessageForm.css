@@ -1,0 +1,8 @@
+.messages-output{
+    width: 830px;
+    height: 70vh;
+    border: 1px solid black;
+    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    margin: 20px;
+}

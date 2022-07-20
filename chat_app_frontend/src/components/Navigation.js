@@ -11,7 +11,7 @@ const Navigation = () => {
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>
-            <img src="https://play-lh.googleusercontent.com/zJAFXJXmvGVA0CffpAXS6iW6P9m093Ln5JRLupbxx6BjSqVaaNUz0S8Cj6KQSPc08oeI=s200" style={{width:95,height:85}} />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfXa2RFDRShkXH03IKgZgsWT069w_AKhsdcQ&usqp=CAU" style={{width:95,height:85}} />
           </Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
