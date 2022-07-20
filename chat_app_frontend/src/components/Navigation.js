@@ -7,7 +7,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 const Navigation = () => {
   return (
-    <Navbar bg="danger" variant="dark" expand="lg" style={{fontFamily:'Calibri',fontSize:25}}>
+    <Navbar bg="danger" variant="dark" expand="lg" style={{fontFamily:'Times new roman',fontSize:25}}>
       <Container>
         <LinkContainer to="/">
           <Navbar.Brand>
@@ -18,10 +18,10 @@ const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <LinkContainer to="/login">
-              <Nav.Link className="me-3">LOGIN</Nav.Link>
+              <Nav.Link className="me-2">Login</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/chat">
-              <Nav.Link className="ms-3">CHAT</Nav.Link>
+              <Nav.Link className="ms-2">Chat</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
