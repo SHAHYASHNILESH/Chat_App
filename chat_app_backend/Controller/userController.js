@@ -31,11 +31,12 @@ module.exports.createUser = async function createUser(req, res) {
 module.exports.loginUser = async function loginUser(req,res) {
   try {
     let { email, password } = req.body;
+    //console.log(password);
     if (email) {
       let user = await usersModels.findOne({ email: email });
+      //console.log(user.password);
       if (user) {
-        const isMatch=await bcrypt.compare(password,user.password);
-        if(isMatch){
+        if(user.password==password){
             let uid = user["_id"];
             let tokens = jwt.sign({ payload: uid }, JWT_KEY);
             res.cookie("login", tokens, { httpOnly: true });
