@@ -1,5 +1,6 @@
 const express=require('express');
 const cors=require('cors');
+const usersModels=require('./Models/usersModels');
 const app=express();
 
 const rooms=['general','tech','finance','crypto'];
@@ -20,4 +21,4 @@ const io=require('socket.io')(server,{
 
 server.listen(PORT,()=>{
     console.log('Listening to PORT',PORT);
-})
+});
