@@ -30,7 +30,7 @@ const UserSchema=mongoose.Schema({
         type:String,
         required:[true,'Password is required']
     },
-    newMessage:{
+    newMessages:{
         type:Object,
         default:{}
     },

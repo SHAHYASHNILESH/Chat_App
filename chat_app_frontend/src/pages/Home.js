@@ -1,7 +1,7 @@
 import React from 'react'
 import {Row,Col, Button} from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-import {SiWechat} from 'react-icons/si';
+import {BsFillChatDotsFill} from 'react-icons/bs';
 import './Home.css';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
                 <h1 className='display-4 fw-bold'>Share the world with your family and friends</h1>
                 <p className='lead'>Our Chat App Lets you Connect with the Entire World</p>
                 <LinkContainer to="/chat">
-                    <Button variant='success'>Get Started <SiWechat/>
+                    <Button variant='success'>Get Started <BsFillChatDotsFill/>
                     </Button>
                 </LinkContainer>
             </div>

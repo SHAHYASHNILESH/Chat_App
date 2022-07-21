@@ -11,18 +11,18 @@ import { useLogoutUserMutation } from "../services/appApi";
 const Navigation = () => {
   const user = useSelector((state) => state.user);
   const [logoutUser] = useLogoutUserMutation();
-  async function handleLogout(e){
+
+  async function handleLogout(e) {
     e.preventDefault();
     await logoutUser(user);
-    window.location.replace('/');
-
+    window.location.replace("/");
   }
   return (
     <Navbar
       bg="danger"
       variant="dark"
       expand="lg"
-      style={{ fontFamily: "Times new roman", fontSize: 25 }}
+      style={{ fontFamily: "cursive", fontSize: 25 }}
     >
       <Container>
         <LinkContainer to="/">
@@ -38,29 +38,16 @@ const Navigation = () => {
           <Nav className="ms-auto">
             {!user && (
               <LinkContainer to="/login">
-                <Nav.Link className="me-2">Login</Nav.Link>
+                <Nav.Link className="me-2">LOGIN</Nav.Link>
               </LinkContainer>
             )}
             <LinkContainer to="/chat">
-              <Nav.Link className="ms-2">Chat</Nav.Link>
+              <Nav.Link className="ms-2">CHAT</Nav.Link>
             </LinkContainer>
             {user && (
-            //   <NavDropdown title={
-            //     <>
-            //         {user.name}
-            //     </>
-            // } id="basic-nav-dropdown">
-            //     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            //     <NavDropdown.Item href="#action/3.2">
-            //       Another action
-            //     </NavDropdown.Item>
-            //     <NavDropdown.Item href="#action/3.3">
-            //       Something
-            //     </NavDropdown.Item>
-                // <NavDropdown.Item>
-                  <Button variant="success" onClick={handleLogout}>Logout</Button>
-                
-              // </NavDropdown>
+              <Button variant="dark" className="ms-5" onClick={handleLogout}>
+                Logout
+              </Button>
             )}
           </Nav>
         </Navbar.Collapse>

@@ -1,6 +1,6 @@
 const express=require('express');
 const userRouter=express.Router();
-const {createUser,loginUser}=require('../Controller/userController');
+const {createUser,loginUser, logoutUser}=require('../Controller/userController');
 
 userRouter
 .route('/')
@@ -10,5 +10,8 @@ userRouter
 .route('/login')
 .post(loginUser)
 
+userRouter
+.route('/logout')
+.get(logoutUser)
 
 module.exports=userRouter;

@@ -48,9 +48,13 @@ module.exports.loginUser = async function loginUser(req,res) {
             });
         }
         else{
-            res.json({
-                message:'Password is not matching'
-            });
+          
+          console.log("Passwords are not matching");
+          res.redirect('/login');
+            // res.json({
+            //     message:'Password is not matching'
+              
+            // });
         }
       } 
       else {
@@ -71,3 +75,11 @@ module.exports.loginUser = async function loginUser(req,res) {
     });
   }
 }
+
+module.exports.logoutUser=async function logoutUser(req,res){
+  res.cookie('login',' ',{maxAge:1});
+    res.json({
+        message:"User Logged out successfully"
+    });
+}
+
